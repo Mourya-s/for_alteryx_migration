@@ -1,0 +1,19 @@
+resources:
+  jobs:
+    workflow_job:
+      name: workflow_job
+
+      tasks:
+        - task_key: migrate
+
+          spark_python_task:
+            python_file: ../src/workflow.py
+
+          environment_key: default
+
+      max_concurrent_runs: 1
+
+      environments:
+        - environment_key: default
+          spec:
+            client: "1"

@@ -1,0 +1,10 @@
+bundle:
+  name: alteryx_migration
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    default: true
+    mode: development

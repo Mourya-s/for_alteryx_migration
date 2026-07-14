@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "tool_id": "4",
+      "plugin": "AlteryxGuiToolkit.TextBox.TextBox"
+    },
+    {
+      "tool_id": "5",
+      "plugin": "AlteryxGuiToolkit.Questions.Tab.Tab"
+    },
+    {
+      "tool_id": "3",
+      "plugin": "AlteryxGuiToolkit.ToolContainer.ToolContainer"
+    },
+    {
+      "tool_id": "1",
+      "plugin": "AlteryxBasePluginsGui.Directory.Directory"
+    },
+    {
+      "tool_id": "2",
+      "plugin": "AlteryxBasePluginsGui.BrowseV2.BrowseV2"
+    },
+    {
+      "tool_id": "6",
+      "plugin": "LockInGui.LockInMacroInput.LockInMacroInput"
+    }
+  ],
+  "connections": [
+    {
+      "origin": null,
+      "destination": null
+    },
+    {
+      "origin": null,
+      "destination": null
+    }
+  ]
+}
