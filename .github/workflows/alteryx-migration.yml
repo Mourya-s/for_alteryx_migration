@@ -48,6 +48,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python generator.py
+      
+      - name: Show Generated Files
+        run: |
+          echo "===== databricks.yml ====="
+          cat generated/databricks.yml
+
+          echo "===== jobs.yml ====="
+          cat generated/resources/jobs.yml
 
       - name: Configure Databricks
         env:
@@ -60,7 +68,13 @@ jobs:
           host=$DATABRICKS_HOST
           token=$DATABRICKS_TOKEN
           EOF
+      - name: Debug Generated Files
+        run: |
+          echo "===== databricks.yml ====="
+          cat generated/databricks.yml
 
+          echo "===== jobs.yml ====="
+          cat generated/resources/jobs.yml
       - name: Validate Bundle
         run: |
           cd generated

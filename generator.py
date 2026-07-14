@@ -42,6 +42,22 @@ Requirements:
 7. The generated jobs.yml must be deployable in Databricks Free Edition / Serverless workspace.
 8. Return only valid JSON.
 
+Workspace supports only serverless compute.
+
+Do not generate:
+- new_cluster
+- existing_cluster_id
+- job_cluster_key
+- environments
+- environment_key
+
+Generate only:
+- databricks.yml
+- jobs.yml
+- workflow.py
+
+The jobs.yml should create a Databricks Workflow compatible with Databricks Free Edition.
+
 Schema:
 
 {{
