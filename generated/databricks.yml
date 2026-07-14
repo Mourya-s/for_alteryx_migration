@@ -6,5 +6,5 @@ include:
 
 targets:
   dev:
-    default: true
+    default:*true
     mode: development

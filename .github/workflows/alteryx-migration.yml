@@ -6,13 +6,10 @@ on:
       - 'workflows/*.yxmd'
 
 jobs:
-
   migrate:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -24,10 +21,6 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-      
-      - name: Install Python Dependencies
-        run: |
-          pip install google-genai
 
       - name: Install Databricks CLI
         run: |
@@ -36,8 +29,6 @@ jobs:
       - name: Check Databricks CLI
         run: |
           databricks version
-
-
 
       - name: Parse Workflow
         run: |
@@ -59,33 +50,18 @@ jobs:
 
           echo "===== workflow.py ====="
           head -50 generated/src/workflow.py
-      
-      - name: Show Generated Files
-        run: |
-          echo "===== databricks.yml ====="
-          cat generated/databricks.yml
-
-          echo "===== jobs.yml ====="
-          cat generated/resources/jobs.yml
 
       - name: Configure Databricks
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
-          mkdir -p ~/.databricks
           cat > ~/.databrickscfg << EOF
           [DEFAULT]
           host=$DATABRICKS_HOST
           token=$DATABRICKS_TOKEN
           EOF
-      - name: Debug Generated Files
-        run: |
-          echo "===== databricks.yml ====="
-          cat generated/databricks.yml
 
-          echo "===== jobs.yml ====="
-          cat generated/resources/jobs.yml
       - name: Validate Bundle
         run: |
           cd generated
