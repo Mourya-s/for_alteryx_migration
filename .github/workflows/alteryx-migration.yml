@@ -24,6 +24,20 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
+      
+      - name: Install Python Dependencies
+        run: |
+          pip install google-genai
+
+      - name: Install Databricks CLI
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
+
+      - name: Check Databricks CLI
+        run: |
+          databricks version
+
+
 
       - name: Parse Workflow
         run: |
