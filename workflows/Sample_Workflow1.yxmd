@@ -234,10 +234,11 @@
       <Wiz_OpenOutputTools>
         <Tool ToolId="2" Selected="False" />
         <Tool ToolId="6" Selected="True" />
+        
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
-      
+
       <Wiz_ChainRunWizard />
 
     </RuntimeProperties>

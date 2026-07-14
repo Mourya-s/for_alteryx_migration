@@ -28,31 +28,20 @@ Do not add any text before or after.
 Requirements:
 
 1. Generate production-ready PySpark code.
-2. Generate Databricks Asset Bundle files.
-3. Generate:
+2. Generate ONLY:
    - workflow.py
    - resources/jobs.yml
-4. Workspace supports ONLY serverless compute.
-5. Do NOT generate:
-   - new_cluster
-   - existing_cluster_id
-   - job_cluster_key
-6. Use:
-   - environment_key: default
-7. The generated jobs.yml must be deployable in a Databricks serverless workspace.
-8. The generated databricks.yml must contain ONLY:
-   - bundle
-   - include
-   - targets
-9. Do NOT place resources.jobs inside databricks.yml.
-10. Put all job definitions inside resources/jobs.yml.
-11. Return only valid JSON.
+3. Do NOT generate databricks.yml.
+4. Put all job definitions inside resources/jobs.yml.
+5. Return only valid JSON.
+6. jobs.yml must be a valid Databricks Asset Bundle job definition.
+7. Do not generate placeholder values.
+8. Use the workflow information provided below.
 
 Schema:
 
 {{
   "pyspark_code": "",
-  
   "jobs_yml": ""
 }}
 
