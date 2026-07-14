@@ -48,6 +48,17 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python generator.py
+
+      - name: Debug Generated Files
+        run: |
+          echo "===== databricks.yml ====="
+          cat generated/databricks.yml
+
+          echo "===== jobs.yml ====="
+          cat generated/resources/jobs.yml
+
+          echo "===== workflow.py ====="
+          head -50 generated/src/workflow.py
       
       - name: Show Generated Files
         run: |

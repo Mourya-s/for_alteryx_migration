@@ -29,34 +29,24 @@ Requirements:
 
 1. Generate production-ready PySpark code.
 2. Generate Databricks Asset Bundle files.
-3. Workspace supports ONLY serverless compute.
-4. Do NOT generate:
+3. Generate:
+   - databricks.yml
+   - resources/jobs.yml
+4. Workspace supports ONLY serverless compute.
+5. Do NOT generate:
    - new_cluster
    - existing_cluster_id
    - job_cluster_key
-5. Use:
+6. Use:
    - environment_key: default
-6. Generate:
-   - databricks.yml
-   - resources/jobs.yml
-7. The generated jobs.yml must be deployable in Databricks Free Edition / Serverless workspace.
-8. Return only valid JSON.
-
-Workspace supports only serverless compute.
-
-Do not generate:
-- new_cluster
-- existing_cluster_id
-- job_cluster_key
-- environments
-- environment_key
-
-Generate only:
-- databricks.yml
-- jobs.yml
-- workflow.py
-
-The jobs.yml should create a Databricks Workflow compatible with Databricks Free Edition.
+7. The generated jobs.yml must be deployable in a Databricks serverless workspace.
+8. The generated databricks.yml must contain ONLY:
+   - bundle
+   - include
+   - targets
+9. Do NOT place resources.jobs inside databricks.yml.
+10. Put all job definitions inside resources/jobs.yml.
+11. Return only valid JSON.
 
 Schema:
 
@@ -69,7 +59,6 @@ Schema:
 Workflow:
 {json.dumps(workflow, indent=2)}
 """
-
 # Call Gemini
 response = client.models.generate_content(
     model="gemini-2.5-flash",
