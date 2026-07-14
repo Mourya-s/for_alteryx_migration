@@ -237,8 +237,9 @@
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
-      <Wiz_ChainRunWizard />
       
+      <Wiz_ChainRunWizard />
+
     </RuntimeProperties>
 
 

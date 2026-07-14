@@ -1,3 +1,5 @@
+# generated/databricks.yml
+
 bundle:
   name: alteryx_migration
 
@@ -6,5 +8,5 @@ include:
 
 targets:
   dev:
-    default:*true
+    default: true
     mode: development

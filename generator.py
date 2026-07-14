@@ -30,7 +30,7 @@ Requirements:
 1. Generate production-ready PySpark code.
 2. Generate Databricks Asset Bundle files.
 3. Generate:
-   - databricks.yml
+   - workflow.py
    - resources/jobs.yml
 4. Workspace supports ONLY serverless compute.
 5. Do NOT generate:
@@ -52,7 +52,7 @@ Schema:
 
 {{
   "pyspark_code": "",
-  "databricks_yml": "",
+  
   "jobs_yml": ""
 }}
 
@@ -97,8 +97,8 @@ os.makedirs("generated/resources", exist_ok=True)
 with open("generated/src/workflow.py", "w", encoding="utf-8") as f:
     f.write(result["pyspark_code"])
 
-with open("generated/databricks.yml", "w", encoding="utf-8") as f:
-    f.write(result["databricks_yml"])
+# with open("generated/databricks.yml", "w", encoding="utf-8") as f:
+#     f.write(result["databricks_yml"])
 
 with open("generated/resources/jobs.yml", "w", encoding="utf-8") as f:
     f.write(result["jobs_yml"])
