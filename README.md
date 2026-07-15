@@ -52,7 +52,7 @@ The goal is to remove the manual, tool-by-tool rewrite work typically required w
 
 ## Architecture Overview
 
-![Architecture overview: Alteryx workflow saved locally, uploaded to GitHub with macro and secrets, GitHub Actions parses and processes the workflow](docs/images/architecture-overview.png)
+<img width="844" height="332" alt="architecture-overview" src="https://github.com/user-attachments/assets/dd11d36d-5ab6-4da7-93f0-f9eb8e4ce0f3" />
 
 At a high level:
 
