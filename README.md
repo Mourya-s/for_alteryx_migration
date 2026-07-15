@@ -349,4 +349,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 - **Maintainer:: Mourya S
 - **Email:: mourya04reddy@gmail.com
 - **Issues:** [GitHub Issues](https://github.com/eryx_migration/issues
-- **Contributing:** [Contributionmd
+- **Contributing:** [Contribution Guide](https://github.com/Mourya-sn/blob/main/CONTRIBUTING.md
