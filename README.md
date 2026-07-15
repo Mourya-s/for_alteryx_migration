@@ -64,7 +64,7 @@ At a high level:
 
 ### CI/CD pipeline detail
 
-![Detailed CI/CD workflow: parsing the XML into JSON, generating a Databricks Asset Bundle via the LLM, validating it, then deploying to the Databricks workspace](docs/images/cicd-workflow-diagram.png)
+<img width="289" height="434" alt="cicd-workflow-diagram" src="https://github.com/user-attachments/assets/3c910693-9191-408e-932f-7470c51e09fc" />
 
 **CI process:**
 1. Trigger on push and read the uploaded `.yxmd` file(s)
@@ -82,7 +82,7 @@ At a high level:
 
 ## Repository Structure
 
-![Full repository tree structure](docs/images/repository-tree.png)
+<img width="260" height="498" alt="repository-tree" src="https://github.com/user-attachments/assets/255322a6-a81c-43d6-beed-12deaf3ba909" />
 
 ```
 for_alteryx/
@@ -191,14 +191,13 @@ Alteryx Workflow (.yxmd / .yxmc)
    Databricks Workspace
 ```
 
-![Simplified pipeline flow from workflow file through to Databricks deployment](docs/images/pipeline-flow-simple.png)
+<img width="253" height="233" alt="pipeline-flow-simple" src="https://github.com/user-attachments/assets/3c738689-bfe5-4c1b-9d5d-bfc6b692dc61" />
 
 ## Example Workflow
 
 A successful run walks through the following GitHub Actions job steps:
 
-![Example GitHub Actions run showing each pipeline step completing successfully](docs/images/github-actions-run-example.png)
-
+<img width="388" height="427" alt="github-actions-run-example" src="https://github.com/user-attachments/assets/79472de2-aa37-412d-97cc-467e27f8b5e2" />
 `Set up job → Checkout → Setup Python → Install Dependencies → Install Databricks CLI → Check Databricks CLI → Parse Workflow → Generate DAB → Debug Generated Files → Configure Databricks → Debug Databricks Auth → Validate Bundle → Deploy Bundle → Debug Generated Files → Post Setup Python → Post Checkout → Complete job`
 
 ## Supported Inputs
@@ -349,7 +348,6 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Contact
 
-- **Maintainer:** TODO: Add maintainer name
-- **Email:** TODO: Add contact email
-- **Project / Demo URL:** TODO: Add demo URL, if any
+- **Maintainer:** TODO: Mourya S
+- **Email:** TODO: mourya04reddy@gmail.com
 - **Issues:** [GitHub Issues](https://github.com/Mourya-s/for_alteryx/issues)
