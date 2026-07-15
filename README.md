@@ -4,9 +4,8 @@ Automatically convert Alteryx workflows (`.yxmd` / `.yxmc`) into deployable Data
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Build Status](https://github.com/Mourya-s/for_alteryx/actions/workflows/alteryx-migration.yml/badge.svg)](https://github.com/Mourya-s/for_alteryx/actions)
-[![Python](https://img.shields.io/badge/python-3.x-EADME.md)
+[![Python](https://img/badge/python-3.x-blue.svg](https://www.python.org/)
 
-> TODO: Add release/version badge once versioning is established.
 
 ---
 
