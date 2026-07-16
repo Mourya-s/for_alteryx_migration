@@ -111,7 +111,6 @@ for_alteryx/
 └── README.md
 ```
 
-> TODO: Confirm whether `generated/` is committed to the repo or produced/consumed purely within the CI run (i.e., should it be `.gitignore`d?).
 
 ## Prerequisites
 
